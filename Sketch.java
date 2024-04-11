@@ -10,7 +10,6 @@ public class Sketch extends PApplet {
     background(210, 255, 173);
   }
 
-
   public void draw() {
 
     // draw all the coloured stickmen
@@ -40,7 +39,7 @@ public class Sketch extends PApplet {
 
   private void manRow(int y) {
 
-    // this draws a row, allowing me to adjust the y of manRow() in order to change colours
+    // this draws a row, allowing me to adjust the y of manRow() in order to change height in draw()
     for(int x = 0; x < 750; x += 50){
       drawMan(x, y);
     }
@@ -49,6 +48,7 @@ public class Sketch extends PApplet {
   
   private void drawMan(int x, int y) {
 
+    // the x int and y int of drawMan() allow the x to be adjusted by manRow and the y in draw() 
     fill(210, 255, 173);
 
     // body
