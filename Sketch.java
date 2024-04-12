@@ -1,5 +1,10 @@
 import processing.core.PApplet;
 
+/**
+ * This program draws 15x7 stickmen and 7x6 hearts
+ * @author T. Martins
+ */
+
 public class Sketch extends PApplet {
 	
   public void settings() {
@@ -36,16 +41,13 @@ public class Sketch extends PApplet {
     }
     
   }
-
-  private void manRow(int y) {
-
-    // this draws a row, allowing me to adjust the y of manRow() in order to change height in draw()
-    for(int x = 0; x < 750; x += 50){
-      drawMan(x, y);
-    }
-
-  }
   
+  /**
+   * Draws a stickman with adjustable x and y coordinates
+   * @param x x-coordinates of where stickman is drawn + 50
+   * @param y y-coordinates of where stickman is draw + 40
+   * @author T. Martins
+   */
   private void drawMan(int x, int y) {
 
     // the x int and y int of drawMan() allow the x to be adjusted by manRow and the y in draw() 
@@ -67,6 +69,26 @@ public class Sketch extends PApplet {
 
   }
 
+  /**
+   * Draws 15 stickmen in a row using drawMan() with adjustable y coordinates
+   * @param y y-coordinates of row
+   * @author T. Martins
+   */
+  private void manRow(int y) {
+
+    // this draws a row, allowing me to adjust the y of manRow() in order to change height in draw()
+    for(int x = 0; x < 750; x += 50){
+      drawMan(x, y);
+    }
+
+  }
+
+  /**
+   * Draws a heart with adjustable x and y coordinates
+   * @param x x-coordinates of where heart is drawn + 17
+   * @param y y-coordinates of where heart is drawn + 10
+   * @author T. Martins
+   */
   private void drawHeart(int x, int y) {
 
     stroke(0);
