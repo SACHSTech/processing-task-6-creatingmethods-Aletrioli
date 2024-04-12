@@ -45,7 +45,7 @@ public class Sketch extends PApplet {
   /**
    * Draws a stickman with adjustable x and y coordinates
    * @param x x-coordinates of where stickman is drawn + 50
-   * @param y y-coordinates of where stickman is draw + 40
+   * @param y y-coordinates of where stickman is drawn + 40
    * @author T. Martins
    */
   private void drawMan(int x, int y) {
