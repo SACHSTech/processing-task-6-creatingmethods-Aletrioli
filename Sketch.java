@@ -18,20 +18,13 @@ public class Sketch extends PApplet {
   public void draw() {
 
     // draw all the coloured stickmen
-    stroke(242, 0, 5);
-    manRow(0);
-    stroke(230, 142, 28);
-    manRow(50);
-    stroke(221, 234, 27);
-    manRow(100);
-    stroke(0, 139, 0);
-    manRow(150);
-    stroke(87, 150, 171);
-    manRow(200);
-    stroke(0, 0, 226);
-    manRow(250);
-    stroke(168, 158, 209);
-    manRow(300);
+    manRow(0, 242, 0, 5);
+    manRow(50, 230, 142, 28);
+    manRow(100, 221, 234, 27);
+    manRow(150, 0, 139, 0);
+    manRow(200, 87, 150, 171);
+    manRow(250, 0, 0, 226);
+    manRow(300, 168, 158, 209);
 
     // draw the hearts
     for (int y = 1; y < 7; y++) {
@@ -72,11 +65,17 @@ public class Sketch extends PApplet {
   /**
    * Draws 15 stickmen in a row using drawMan() with adjustable y coordinates
    * @param y y-coordinates of row
+   * @param colour1 value of red for stroke
+   * @param colour2 value of green for stroke
+   * @param colour3 value of blue for stroke
    * @author T. Martins
    */
-  private void manRow(int y) {
+  private void manRow(int y, int colour1, int colour2, int colour3) {
 
     // this draws a row, allowing me to adjust the y of manRow() in order to change height in draw()
+
+    stroke(colour1, colour2, colour3);
+
     for(int x = 0; x < 750; x += 50){
       drawMan(x, y);
     }
