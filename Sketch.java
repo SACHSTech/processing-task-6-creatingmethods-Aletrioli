@@ -27,7 +27,7 @@ public class Sketch extends PApplet {
     manRow(300, 168, 158, 209);
 
     // draw the hearts
-    for (int y = 1; y < manRow(350, 210, 255, 173); y++) {
+    for (int y = 1; y < manRow(300, 168, 158, 209); y++) {
       for (int x = 50; x < 700; x += 100) {
         drawHeart(x + y % 2 * 50, y * 50);
       }
@@ -81,7 +81,7 @@ public class Sketch extends PApplet {
       drawMan(x, y);
     }
 
-    return (int)(y * 0.02);
+    return (int)((y + 50) * 0.02);
 
   }
 
