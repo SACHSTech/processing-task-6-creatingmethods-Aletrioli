@@ -27,7 +27,7 @@ public class Sketch extends PApplet {
     manRow(300, 168, 158, 209);
 
     // draw the hearts
-    for (int y = 1; y < 7; y++) {
+    for (int y = 1; y < manRow(350, 210, 255, 173); y++) {
       for (int x = 50; x < 700; x += 100) {
         drawHeart(x + y % 2 * 50, y * 50);
       }
@@ -69,8 +69,9 @@ public class Sketch extends PApplet {
    * @param colour2 value of green for stroke
    * @param colour3 value of blue for stroke
    * @author T. Martins
+   * @return 
    */
-  private void manRow(int y, int colour1, int colour2, int colour3) {
+  private int manRow(int y, int colour1, int colour2, int colour3) {
 
     // this draws a row, allowing me to adjust the y of manRow() in order to change height in draw()
 
@@ -79,6 +80,8 @@ public class Sketch extends PApplet {
     for(int x = 0; x < 750; x += 50){
       drawMan(x, y);
     }
+
+    return (int)(y * 0.02);
 
   }
 
